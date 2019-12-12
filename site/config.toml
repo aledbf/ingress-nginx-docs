@@ -94,6 +94,8 @@ baseName = "feed"
 RSSLink = "/index.xml"
 copyright = "The Kubernetes Authors."
 
+navbar_logo = false
+
 showedit = true
 
 github_repo = "https://github.com/kubernetes/ingress-nginx"
