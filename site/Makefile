@@ -8,12 +8,15 @@ DOCKER_RUN   = $(DOCKER) run --rm --interactive --tty --volume $(CURDIR)/../:/sr
 help: ## Show this help.
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {sub("\\\\n",sprintf("\n%22c"," "), $$2);printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
-all: build ## Build site with production settings and put deliverables in ./public
+all: docker-build ## Build site with production settings and put deliverables in ./public
 
 docker-image: ## Build custom hugo docker image
 	$(DOCKER) build . --tag $(DOCKER_IMAGE) --build-arg HUGO_VERSION=$(HUGO_VERSION)
 
-build: docker-image ## Build site with production settings and put deliverables in ./public
+build: ## Build site with production settings and put deliverables in ./public
+	hugo --minify
+
+docker-build: docker-image ## Build site with production settings and put deliverables in ./public
 	$(DOCKER_RUN) $(DOCKER_IMAGE) hugo --source site
 
 serve: docker-image ## Build site and serve the content
