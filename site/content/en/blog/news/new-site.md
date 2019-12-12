@@ -20,4 +20,4 @@ Big thanks to [Hugo](https://gohugo.io) for being the static site generator, and
 
 Please let us know if you have feedback, either by [filing an issue](https://github.com/kubernetes/ingress-nginx/issues)
 , or [submitting a pull request](https://github.com/kubernetes/ingress-nginx/pulls) or come chat with us
-on [Slack](https://kubernetes.slack.com) in the #ingress-nginx channel
+on [Slack](https://kubernetes.slack.com) in the #ingress-nginx channel.

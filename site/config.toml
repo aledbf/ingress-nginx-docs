@@ -107,7 +107,7 @@ release_branch = "nginx-0.26.1"
 release_version = "0.26.1"
 
 # example tag
-example_image_tag = "gcr.io/agones-images/udp-server:0.17"
+example_image_tag = "quay.io/aledbf/nginx-ingress-controller:0.26.1"
 
 # param for displaying an announcement block on every page; see PR #16210
 announcement = false
