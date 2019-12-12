@@ -2,7 +2,7 @@
 # This default build command adds the robots noindex directive to the site headers.
 # It is turned off for only for the production site by using [context.master] below
 # DO NOT REMOVE THIS (contact @chenopis or @sig-docs-maintainers)
-publish = "public"
+publish = "site/public"
 #functions = "functions"
 command = "make -C site npm git build"
 
@@ -21,5 +21,5 @@ command = "hugo --enableGitInfo --buildFuture -b $DEPLOY_PRIME_URL"
 command = "hugo --enableGitInfo --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.master]
-publish = "public"
+publish = "site/public"
 command = "make -C site npm git build"
