@@ -19,5 +19,8 @@ build: ## Build site with production settings and put deliverables in ./public
 docker-build: docker-image ## Build site with production settings and put deliverables in ./public
 	$(DOCKER_RUN) $(DOCKER_IMAGE) hugo --source site
 
+npm:
+	npm install postcss-cli autoprefixer
+
 serve: docker-image ## Build site and serve the content
 	$(DOCKER_RUN) -p 1313:1313 $(DOCKER_IMAGE) hugo server --buildFuture --bind 0.0.0.0 --source site

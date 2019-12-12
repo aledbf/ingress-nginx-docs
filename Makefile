@@ -1,2 +1,2 @@
 build:
-	make -C site build
+	make -C site npm build
